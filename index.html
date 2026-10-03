@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Sameeha ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+<!-- PAGE 1 : LOGIN -->
+<section id="loginPage" class="page active">
+  <div class="card">
+    <div class="heart">❤️</div>
+    <h1>Something Special Awaits...</h1>
+    <p>Only one special person can enter ✨</p>
+
+    <label>Name</label>
+    <input id="username" placeholder="Enter your name">
+
+    <label>Date</label>
+    <input id="password" placeholder="DD-MM-YYYY" inputmode="numeric">
+
+    <button class="primary-btn" id="loginBtn">Enter ❤️</button>
+    <p id="loginError" class="error"></p>
+
+    <!-- Admin access -->
+    <button class="admin-link" id="adminBtn">Admin</button>
+  </div>
+</section>
+
+<!-- ADMIN -->
+<section id="adminPage" class="page">
+  <div class="card">
+    <div class="heart">🔐</div>
+    <h1>Admin Access</h1>
+    <p>Admin can test/open the surprise anytime.</p>
+
+    <input id="adminKey" type="password" placeholder="Admin key">
+    <button class="primary-btn" id="adminLoginBtn">Unlock Admin</button>
+    <button class="help-btn" id="adminBackBtn">Back</button>
+    <p id="adminError" class="error"></p>
+  </div>
+</section>
+
+<!-- PAGE 2 : QUESTION -->
+<section id="questionPage" class="page">
+  <div class="card">
+    <div class="sparkle">✨</div>
+    <h1>What's your name?</h1>
+    <p>I already know it... but I want to hear you say it 😌</p>
+
+    <input id="answer" placeholder="Type your answer">
+
+    <button class="primary-btn" id="answerBtn">Submit 💕</button>
+    <button class="help-btn hidden" id="helpBtn">Help Me 🥺</button>
+
+    <p id="attemptText">Attempts: 0 / 5</p>
+    <p id="questionMessage"></p>
+  </div>
+</section>
+
+<!-- PAGE 3 : GIFT -->
+<section id="giftPage" class="page">
+  <div class="stars"></div>
+
+  <div class="gift-screen">
+    <p class="tiny-title">A little surprise for you 🎁</p>
+    <h1>Wait for the magic...</h1>
+
+    <div id="countdown">Loading...</div>
+
+    <div id="giftLocked" class="gift-wrap">
+      <div class="ready-tag">🎁 YOUR GIFT IS READY</div>
+      <div class="gift-box big-gift">
+        <div class="box-lid"></div>
+        <div class="box-body"></div>
+        <div class="ribbon vertical"></div>
+        <div class="ribbon horizontal"></div>
+        <div class="bow">🎀</div>
+      </div>
+      <h2 class="open-message">Please open the gift 💝</h2>
+      <p class="unlock-note">Available at <b>12:00 AM — October 4</b></p>
+    </div>
+
+    <button id="openGiftBtn" class="primary-btn hidden">OPEN YOUR GIFT 🎁</button>
+    <p id="adminModeText" class="admin-mode"></p>
+  </div>
+</section>
+
+<!-- PAGE 4 : FINAL -->
+<section id="birthdayPage" class="page">
+  <canvas id="fireworks"></canvas>
+
+  <!-- Many separate memory photos instead of a plain black background -->
+  <div class="photo-wall" aria-hidden="true">
+    <div class="memory-tile t1"><img src="assets/bg-01.jpg" alt=""></div>
+    <div class="memory-tile t2"><img src="assets/bg-02.jpg" alt=""></div>
+    <div class="memory-tile t3"><img src="assets/bg-03.jpg" alt=""></div>
+    <div class="memory-tile t4"><img src="assets/bg-04.png" alt=""></div>
+    <div class="memory-tile t5"><img src="assets/bg-05.png" alt=""></div>
+    <div class="memory-tile t6"><img src="assets/bg-06.png" alt=""></div>
+    <div class="memory-tile t7"><img src="assets/bg-07.png" alt=""></div>
+    <div class="memory-tile t8"><img src="assets/bg-08.png" alt=""></div>
+    <div class="memory-tile t9"><img src="assets/bg-01.jpg" alt=""></div>
+    <div class="memory-tile t10"><img src="assets/bg-02.jpg" alt=""></div>
+    <div class="memory-tile t11"><img src="assets/bg-03.jpg" alt=""></div>
+    <div class="memory-tile t12"><img src="assets/bg-05.png" alt=""></div>
+  </div>
+  <div class="photo-wall-overlay"></div>
+
+  <div class="birthday-content">
+    <div class="photo-frame large-center-frame">
+      <img src="assets/sameeha-center.png" alt="Sameeha birthday artwork">
+    </div>
+
+    <p class="small-line">Today is all about you 💖</p>
+    <h1>HAPPY BIRTHDAY</h1>
+    <h2>Sameeha ❤️</h2>
+
+    <p class="wish">
+      May your smile stay this beautiful forever.<br>
+      Wishing you a day full of happiness, love and magical moments ✨
+    </p>
+  </div>
+
+  <audio id="birthdaySong" src="assets/birthday-song.mp3" preload="auto"></audio>
+  <button id="musicBtn" class="music-btn">🔊 Sound ON</button>
+</section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
